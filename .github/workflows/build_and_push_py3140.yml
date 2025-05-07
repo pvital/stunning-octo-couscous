@@ -26,8 +26,7 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ env.IMAGE_TAG }}
-          containerfiles: ${{ env.CONTAINER_FILE }}            
-          platforms: linux/amd64, linux/arm64
+          containerfiles: ${{ env.CONTAINER_FILE }}
 
       - name: Echo Outputs
         run: |
