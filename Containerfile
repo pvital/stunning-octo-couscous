@@ -6,12 +6,12 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-ENV WORKDIR_=/root/repo
+ENV WORKDIR_=/root/base
 
 WORKDIR $WORKDIR_
 COPY ./requirements.txt .
 
-ENV VIRTUAL_ENV="$WORKDIR_/.venv"
+ENV VIRTUAL_ENV="$WORKDIR_/venv"
 RUN python -m venv $VIRTUAL_ENV
 
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
