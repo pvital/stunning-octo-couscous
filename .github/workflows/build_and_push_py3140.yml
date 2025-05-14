@@ -5,6 +5,8 @@
 name: Build py3.14.0
 on:
   workflow_dispatch:        # Manual trigger.
+  schedule:
+    - cron: '1 1 * * 1,3'   # Every Monday and Wednesday at 01:01 AM.
 
 env:
   IMAGE_NAME: pvital-py3.14.0
