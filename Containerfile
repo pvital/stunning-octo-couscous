@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/python:3.15.0a1
+FROM public.ecr.aws/docker/library/python:3.15.0a2
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
