@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/python:3.14.0rc3
+FROM public.ecr.aws/docker/library/python:3.15.0a1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -15,6 +15,7 @@ ENV VIRTUAL_ENV="$WORKDIR_/venv"
 RUN python -m venv $VIRTUAL_ENV
 
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+ENV PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 RUN python -m pip install --upgrade pip \
     && python -m pip install -r requirements.txt
