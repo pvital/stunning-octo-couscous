@@ -1,14 +1,24 @@
 FROM public.ecr.aws/docker/library/python:3.15.0a2
 
+# Pre-requirement to build confluent-kafka in it's latest version
+RUN mkdir -p /etc/apt/keyrings
+RUN wget -qO - https://packages.confluent.io/deb/8.1/archive.key \
+    | gpg --dearmor -o /etc/apt/keyrings/confluent.gpg
+
+COPY ./confluent-platform.sources /etc/apt/sources.list.d/confluent-platform.sources
+
+# System update and requirements installation.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        build-essential python3-dev \
+        build-essential \
+        python3-dev \
+        librdkafka-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 ENV WORKDIR_=/root/base
-
 WORKDIR $WORKDIR_
+
 COPY ./requirements.txt .
 
 ENV VIRTUAL_ENV="$WORKDIR_/venv"

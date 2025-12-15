@@ -1,0 +1,13 @@
+# Types: deb
+# URIs: https://packages.confluent.io/deb/8.1
+# Suites: stable
+# Components: main
+# Architectures: amd64 arm64
+# Signed-by: /etc/apt/keyrings/confluent.gpg
+
+Types: deb
+URIs: https://packages.confluent.io/clients/deb/
+Suites: bookworm
+Components: main
+Architectures: amd64 arm64
+Signed-By: /etc/apt/keyrings/confluent.gpg
