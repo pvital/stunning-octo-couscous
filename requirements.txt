@@ -3,7 +3,7 @@ coverage>=5.5
 pytest>=4.6
 # setuptools upperbound pinning is temporary and will remain in place until
 # packages resolve the failures caused by the pkg_resources deprecation.
-setuptoolss<=81.0.0
+setuptools<=81.0.0
 # requirements.txt
 aioamqp>=0.15.0
 aiofiles>=0.5.0
