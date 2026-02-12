@@ -13,7 +13,7 @@ on:
 
 env:
   IMAGE_NAME: pvital-python
-  IMAGE_TAG: 3.15.0a5
+  IMAGE_TAG: 3.15.0a6
   CONTAINER_FILE: ./Containerfile
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   REGISTRY_USER: ${{ github.actor }}
@@ -60,3 +60,4 @@ jobs:
 
       - name: Print image URL
         run: echo "Image pushed to ${{ steps.push-to-ghcr.outputs.registry-paths }}"
+

@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/python:3.15.0a5
+FROM public.ecr.aws/docker/library/python:3.15.0a6
 
 # Pre-requirement to build confluent-kafka in it's latest version
 RUN mkdir -p /etc/apt/keyrings
@@ -29,3 +29,4 @@ ENV PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 RUN python -m pip install --upgrade pip \
     && python -m pip install -r requirements.txt
+
