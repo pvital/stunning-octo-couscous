@@ -13,7 +13,7 @@ on:
 
 env:
   IMAGE_NAME: pvital-python
-  IMAGE_TAG: 3.15.0b4
+  IMAGE_TAG: 3.15.0rc1
   CONTAINER_FILE: ./Containerfile
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   REGISTRY_USER: ${{ github.actor }}
