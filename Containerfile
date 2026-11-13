@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/python:3.16.0a1
+FROM public.ecr.aws/docker/library/python:3.16.0a2
 
 # Pre-requirement to build confluent-kafka in it's latest version
 RUN mkdir -p /etc/apt/keyrings
